@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QR_Barcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-JT-je7">
+                                <rect key="frame" x="20" y="734" width="374" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZc-5o-wz0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xl3-Rc-n6v">
+                                <rect key="frame" x="20" y="666" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J7L-ci-lRG">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Pe9-gu-TF2"/>
+                                    <constraint firstAttribute="width" constant="250" id="pli-fb-yvz"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B1Q-gz-MN8">
+                                <rect key="frame" x="20" y="132" width="374" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="QRCode"/>
+                                    <segment title="BarCode"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BTx-JT-je7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EbI-Pv-FZi"/>
+                            <constraint firstItem="xl3-Rc-n6v" firstAttribute="trailing" secondItem="BTx-JT-je7" secondAttribute="trailing" id="FwB-1v-ObG"/>
+                            <constraint firstItem="J7L-ci-lRG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H4i-mk-oLN"/>
+                            <constraint firstItem="xl3-Rc-n6v" firstAttribute="leading" secondItem="BTx-JT-je7" secondAttribute="leading" id="L3k-qo-sdb"/>
+                            <constraint firstItem="J7L-ci-lRG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ova-3a-rcd"/>
+                            <constraint firstItem="BTx-JT-je7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bBD-aD-ktR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BTx-JT-je7" secondAttribute="bottom" constant="90" id="fxi-dl-byc"/>
+                            <constraint firstItem="xl3-Rc-n6v" firstAttribute="leading" secondItem="B1Q-gz-MN8" secondAttribute="leading" id="itd-Ia-Djz"/>
+                            <constraint firstItem="xl3-Rc-n6v" firstAttribute="trailing" secondItem="B1Q-gz-MN8" secondAttribute="trailing" id="jqP-EK-D1J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BTx-JT-je7" secondAttribute="trailing" constant="20" id="mBs-sZ-kJz"/>
+                            <constraint firstItem="BTx-JT-je7" firstAttribute="top" secondItem="xl3-Rc-n6v" secondAttribute="bottom" constant="34" id="t8u-fS-H5B"/>
+                            <constraint firstItem="B1Q-gz-MN8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="y87-Lf-LtO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="J7L-ci-lRG" id="rFu-TX-hTi"/>
+                        <outlet property="select" destination="B1Q-gz-MN8" id="9wP-1A-U2a"/>
+                        <outlet property="txt" destination="xl3-Rc-n6v" id="VcX-AG-jKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
